@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Question 1: A person walks 15 meters south, then turns left and walks 20 meters, then again turns left and walks 10 meters. How far is he from the starting point?</h1>
+    <input type="text" id="answer" placeholder="Enter your answer" />
+    <button onclick="checkAnswer()">Submit</button>
+
+    <p id="hint" style="display: none;">Correct! Scan the next QR code "where  hunger meeets its match and friends gather for a tasty catch" for the next question.</p>
+
+    <script>
+        function checkAnswer() {
+            var answer = document.getElementById("answer").value;
+            if (answer == "7") {
+                // If the answer is correct, show the hint for the next QR code.
+                document.getElementById("hint").style.display = "block";
+                // You can also store the user's progress in local storage or redirect them.
+                localStorage.setItem('progress', '1');
+            } else {
+                alert("Incorrect answer, try again!");
+            }
+        }
+    </script>
+</body>
+</html>

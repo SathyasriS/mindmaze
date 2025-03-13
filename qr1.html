@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1> Question 1: A farmer has 5 haysacks in one field and 4 haystacks in another. If he combines them all in one field, how many haystacks does he have? </h1>
+    <input type="text" id="answer" placeholder="Enter your answer" />
+    <button onclick="checkAnswer()">Submit</button>
+
+    <p id="hint" style="display: none;">Correct! Scan the next QR code "Where whispers tell a thousand tales and silence speaks the loudest" for the next question.</p>
+
+    <script>
+        function checkAnswer() {
+            var answer = document.getElementById("answer").value;
+            if (answer == "1") {
+                // If the answer is correct, show the hint for the next QR code.
+                document.getElementById("hint").style.display = "block";
+                // You can also store the user's progress in local storage or redirect them.
+                localStorage.setItem('progress', '1');
+            } else {
+                alert("Incorrect answer, try again!");
+            }
+        }
+    </script>
+</body>
+</html>

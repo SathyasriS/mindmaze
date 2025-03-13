@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>What is the output for the following code:
+        #include <stdio.h>
+        int func1(int n, int sum) {
+            if (n > 5) return sum;
+            return func1(n + 1, sum + n);
+        }
+        int main() {
+            printf("%d\n", func1(1, 0));
+            return 0;
+        }
+        </h1>
+    <input type="text" id="answer" placeholder="Enter your answer" />
+    <button onclick="checkAnswer()">Submit</button>
+
+    <p id="hint" style="display: none;">Correct! Scan the next QR code at place "Here I stand, but i wont rise - coz Iam out of service " for the next question.</p>
+
+    <script>
+        function checkAnswer() {
+            var answer = document.getElementById("answer").value;
+            if (answer == "15") {
+                // If the answer is correct, show the hint for the next QR code.
+                document.getElementById("hint").style.display = "block";
+                // You can also store the user's progress in local storage or redirect them.
+                localStorage.setItem('progress', '1');
+            } else {
+                alert("Incorrect answer, try again!");
+            }
+        }
+    </script>
+</body>
+</html>

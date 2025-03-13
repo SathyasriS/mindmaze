@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>A train is 1 km long and traveling at 1 km per minute. How long will it take to pass through a 1 km tunnel?</h1>
+    <input type="text" id="answer" placeholder="Enter your answer" />
+    <button onclick="checkAnswer()">Submit</button>
+
+    <p id="hint" style="display: none;">Correct! Scan the next QR code "where pages mutiply and copies come alive" for the next question.</p>
+
+    <script>
+        function checkAnswer() {
+            var answer = document.getElementById("answer").value;
+            if (answer == "12") {
+                // If the answer is correct, show the hint for the next QR code.
+                document.getElementById("hint").style.display = "block";
+                // You can also store the user's progress in local storage or redirect them.
+                localStorage.setItem('progress', '1');
+            } else {
+                alert("Incorrect answer, try again!");
+            }
+        }
+    </script>
+</body>
+</html>

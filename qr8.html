@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ans1 + ans2 – ans3 + ans4 – ans5 + ans6 – ans7
+        </h1>
+    <input type="text" id="answer" placeholder="Enter your answer" />
+    <button onclick="checkAnswer()">Submit</button>
+
+    <p id="hint" style="display: none;">Hurry up where you had started!!</p>
+
+    <script>
+        function checkAnswer() {
+            var answer = document.getElementById("answer").value;
+            if (answer == "20") {
+                // If the answer is correct, show the hint for the next QR code.
+                document.getElementById("hint").style.display = "block";
+                // You can also store the user's progress in local storage or redirect them.
+                localStorage.setItem('progress', '1');
+            } else {
+                alert("Incorrect answer, try again!");
+            }
+        }
+    </script>
+</body>
+</html>
