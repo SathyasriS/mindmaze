@@ -13,16 +13,17 @@
     </style>
 </head>
 <body>
-    <h1>Question 1: I am an odd number. Take away one letter, and I become even. What number am I?</h1>
+    <h1>ans1 + ans2 – ans3 + ans4 – ans5 + ans6 – ans7
+        </h1>
     <input type="text" id="answer" placeholder="Enter your answer" />
     <button onclick="checkAnswer()">Submit</button>
 
-    <p id="hint" style="display: none;">Correct! Scan the next QR code "A statue of honour, a figure of grace , the foundation of learning in this very place" for the next question.</p>
+    <p id="hint" style="display: none;">Hurry up where you had started!!</p>
 
     <script>
         function checkAnswer() {
             var answer = document.getElementById("answer").value;
-            if (answer == "2") {
+            if (answer == "20") {
                 // If the answer is correct, show the hint for the next QR code.
                 document.getElementById("hint").style.display = "block";
                 // You can also store the user's progress in local storage or redirect them.
